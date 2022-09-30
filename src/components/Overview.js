@@ -8,7 +8,7 @@ const Overview = (props) => {
       {user.map((user) => {
         return (
           <p key={user.id}>
-            {user.name}, {user.lastName}, {user.id}
+            {user.name}, {user.lastName}, {user.email}
           </p>
         );
       })}

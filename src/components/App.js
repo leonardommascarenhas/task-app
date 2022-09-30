@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Overview from "./Overview";
 import uniqid from "uniqid";
 import "../App.css";
+import Header from "./Header";
 class App extends Component {
   constructor() {
     super();
@@ -33,7 +34,8 @@ class App extends Component {
   render() {
     const { userInfo } = this.state;
     return (
-      <div className="formulario">
+      <div>
+        <Header />
         <form className="form" onSubmit={this.onSubmitUser}>
           <input
             placeholder="Name"
