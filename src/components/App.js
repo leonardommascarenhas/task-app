@@ -22,7 +22,7 @@ class App extends Component {
   onSubmitUser = (e) => {
     e.preventDefault();
     this.setState({
-      userInfo: this.state.userInfo.concat(this.state),
+      userInfo: [this.state],
       name: "",
       lastName: "",
       email: "",
