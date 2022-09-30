@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Overview from "./Overview";
 import uniqid from "uniqid";
-
+import "../App.css";
 class App extends Component {
   constructor() {
     super();
@@ -33,26 +33,26 @@ class App extends Component {
   render() {
     const { userInfo } = this.state;
     return (
-      <div>
+      <div className="formulario">
         <form className="form" onSubmit={this.onSubmitUser}>
-          <label htmlFor="name">Name</label>
           <input
+            placeholder="Name"
             type="text"
             name="name"
             className="textInput"
             value={this.state.name}
             onChange={(e) => this.handleChange(e, "name")}
           ></input>
-          <label htmlFor="lastName">LastName</label>
           <input
+            placeholder="Last Name"
             type="text"
             name="lastName"
             className="textInput"
             value={this.state.lastName}
             onChange={(e) => this.handleChange(e, "lastName")}
           ></input>
-          <label htmlFor="email">Email</label>
           <input
+            placeholder="email"
             type="text"
             name="email"
             className="textInput"
