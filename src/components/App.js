@@ -3,21 +3,23 @@ import Overview from "./Overview";
 import uniqid from "uniqid";
 import "../App.css";
 import Header from "./Header";
+import Experience from "./experience";
 class App extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
 
     this.state = {
       name: "",
       lastName: "",
-      email: "",
       id: uniqid(),
+      userExperience: [],
       userInfo: [],
     };
   }
 
-  handleChange = (e, field) => {
-    this.setState({ [field]: e.target.value });
+  handleChange = (e) => {
+    this.setState({ [e.target.name]: e.target.value });
+    console.log(this.state);
   };
 
   onSubmitUser = (e) => {
@@ -26,7 +28,8 @@ class App extends Component {
       userInfo: [this.state],
       name: "",
       lastName: "",
-      email: "",
+      userExperience: [],
+
       id: uniqid(),
     });
     console.log(this.state);
@@ -54,15 +57,18 @@ class App extends Component {
             onChange={(e) => this.handleChange(e, "lastName")}
           ></input>
           <input
-            placeholder="email"
+            placeholder="schoolName"
             type="text"
-            name="email"
+            name="schoolName"
             className="textInput"
-            value={this.state.email}
-            onChange={(e) => this.handleChange(e, "email")}
+            value={this.state.userExperience}
+            onChange={(e) =>
+              this.setState({ userExperience: [e.target.value] })
+            }
           ></input>
           <button type="submit">Click</button>
         </form>
+
         <Overview user={userInfo} />
       </div>
     );

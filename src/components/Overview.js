@@ -7,8 +7,18 @@ const Overview = (props) => {
     <div>
       {user.map((user) => {
         return (
-          <div key={user.id}>
-            <p>{user.name}</p> <p>{user.lastName}</p> <p>{user.email}</p>
+          <div key={user.id} className="cardDisplay">
+            <h1>description</h1>
+            <h2>User Info</h2>
+            <h3>Name: </h3>
+            <p>{user.name}</p>
+            <h3>Last Name: </h3>
+            <p>{user.lastName}</p>
+            <h3>Email</h3>
+            <p>{user.email}</p>
+            <h2>Experience</h2>
+            <h3>School Name</h3>
+            <p>{user.userExperience[0]}</p>
           </div>
         );
       })}
