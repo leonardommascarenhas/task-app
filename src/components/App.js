@@ -12,7 +12,7 @@ class App extends Component {
       name: "",
       lastName: "",
       id: uniqid(),
-      userExperience: [],
+      userExperience: { schoolName: "" },
       userInfo: [],
     };
   }
@@ -28,7 +28,7 @@ class App extends Component {
       userInfo: [this.state],
       name: "",
       lastName: "",
-      userExperience: [],
+      userExperience: { schoolName: "" },
 
       id: uniqid(),
     });
@@ -61,9 +61,9 @@ class App extends Component {
             type="text"
             name="schoolName"
             className="textInput"
-            value={this.state.userExperience}
+            value={this.state.userExperience.schoolName}
             onChange={(e) =>
-              this.setState({ userExperience: [e.target.value] })
+              this.setState({ userExperience: { schoolName: e.target.value } })
             }
           ></input>
           <button type="submit">Click</button>

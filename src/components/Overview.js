@@ -18,7 +18,7 @@ const Overview = (props) => {
             <p>{user.email}</p>
             <h2>Experience</h2>
             <h3>School Name</h3>
-            <p>{user.userExperience[0]}</p>
+            <p>{user.userExperience.schoolName}</p>
           </div>
         );
       })}
