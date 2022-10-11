@@ -7,9 +7,9 @@ const Overview = (props) => {
     <div>
       {user.map((user) => {
         return (
-          <p key={user.id}>
-            {user.name}, {user.lastName}, {user.email}
-          </p>
+          <div key={user.id}>
+            <p>{user.name}</p> <p>{user.lastName}</p> <p>{user.email}</p>
+          </div>
         );
       })}
     </div>
