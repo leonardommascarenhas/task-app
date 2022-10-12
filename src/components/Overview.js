@@ -16,9 +16,6 @@ const Overview = (props) => {
             <p>{user.lastName}</p>
             <h3>Email</h3>
             <p>{user.email}</p>
-            <h2>Experience</h2>
-            <h3>School Name</h3>
-            <p>{user.userExperience.schoolName}</p>
           </div>
         );
       })}
