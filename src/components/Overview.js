@@ -2,7 +2,9 @@ import React from "react";
 
 function hideForm() {
   let card = document.querySelector(".cardDisplay");
+  let userInfoSection = document.getElementById("userInfo");
   card.style.display = "none";
+  userInfoSection.style.display = "flex";
 }
 
 const Overview = (props) => {

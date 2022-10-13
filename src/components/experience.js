@@ -10,36 +10,38 @@ export default class Experience extends Component {
 
   handleChange = (e) => {
     this.setState({ [e.target.name]: e.target.value });
-    console.log(this.state);
   };
 
   onSubmitUser = (e) => {
     e.preventDefault();
+    let form = document.querySelector(".userExperience");
+    form.style.display = "none";
     this.setState({
-      userExp: [this.state],
-      schoolName: "",
+      schoolName: this.state.schoolName,
       id: uniqid(),
+      userExp: [this.state],
     });
-    console.log(this.state);
   };
 
   render() {
     const { userExp } = this.state;
     return (
-      <section>
-        <form className="form" onSubmit={this.onSubmitUser}>
-          <input
-            placeholder="schoolName"
-            type="text"
-            name="schoolName"
-            className="textInput"
-            value={this.state.schoolName}
-            onChange={(e) => this.handleChange(e, "schoolName")}
-          ></input>
-          <button type="submit">Alo</button>
-        </form>
+      <>
+        <section className="userExperience">
+          <form className="form" onSubmit={this.onSubmitUser}>
+            <input
+              placeholder="schoolName"
+              type="text"
+              name="schoolName"
+              className="textInput"
+              value={this.state.userExp.schoolName}
+              onChange={(e) => this.handleChange(e, "schoolName")}
+            ></input>
+            <button type="submit">Alo</button>
+          </form>
+        </section>
         <Overview userExp={userExp}></Overview>
-      </section>
+      </>
     );
   }
 }

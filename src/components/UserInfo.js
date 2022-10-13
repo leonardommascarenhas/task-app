@@ -16,46 +16,52 @@ class UserInfo extends Component {
 
   onSubmitUser = (e) => {
     e.preventDefault();
+    let userInfoSection = document.getElementById("userInfo");
+    userInfoSection.style.display = "none";
     this.setState({
-      userInfo: [this.state],
-      name: "",
-      lastName: "",
+      name: this.state.name,
+      lastName: this.state.lastName,
+      email: this.state.email,
       id: uniqid(),
+      userInfo: [this.state],
     });
+    console.log(this.state.userInfo);
   };
   render() {
     const { userInfo } = this.state;
     return (
-      <div>
-        <form className="form" onSubmit={this.onSubmitUser}>
-          <input
-            placeholder="Name"
-            type="text"
-            name="name"
-            className="textInput"
-            id="name"
-            onChange={(e) => this.handleChange(e, "name")}
-          ></input>
-          <input
-            placeholder="Last Name"
-            type="text"
-            name="lastName"
-            className="textInput"
-            id="lastName"
-            onChange={(e) => this.handleChange(e, "lastName")}
-          ></input>
-          <input
-            placeholder="Email"
-            type="email"
-            name="email"
-            className="textInput"
-            id="email"
-            onChange={(e) => this.handleChange(e, "email")}
-          ></input>
-          <button type="submit">Click</button>
-        </form>
+      <>
+        <section id="userInfo">
+          <form className="form" onSubmit={this.onSubmitUser}>
+            <input
+              placeholder="Name"
+              type="text"
+              name="name"
+              className="textInput"
+              id="name"
+              onChange={(e) => this.handleChange(e, "name")}
+            ></input>
+            <input
+              placeholder="Last Name"
+              type="text"
+              name="lastName"
+              className="textInput"
+              id="lastName"
+              onChange={(e) => this.handleChange(e, "lastName")}
+            ></input>
+            <input
+              placeholder="Email"
+              type="email"
+              name="email"
+              className="textInput"
+              id="email"
+              onChange={(e) => this.handleChange(e, "email")}
+            ></input>
+            <button type="submit">Click</button>
+          </form>
+        </section>
         <Overview user={userInfo} />
-      </div>
+      </>
     );
   }
 }
