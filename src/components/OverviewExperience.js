@@ -25,7 +25,7 @@ const Overview = (props) => {
                 Editar
               </button>
             </div>
-            <h3>schoolName</h3>
+            <h3>School Name</h3>
             <p>{userExp.schoolName}</p>
             <h3>Title of Study</h3>
             <p>{userExp.titleOfStudy}</p>
