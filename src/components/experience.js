@@ -38,7 +38,7 @@ export default class Experience extends Component {
           ></input>
           <button type="submit">Alo</button>
         </form>
-        <Overview userExp={userExp} />
+        <Overview userExp={userExp}></Overview>
       </section>
     );
   }

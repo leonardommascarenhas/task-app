@@ -7,13 +7,11 @@ class UserInfo extends Component {
     name: "",
     lastName: "",
     id: uniqid(),
-    userExperience: { schoolName: "" },
     userInfo: [],
   };
 
   handleChange = (e) => {
     this.setState({ [e.target.name]: e.target.value });
-    console.log(this.state);
   };
 
   onSubmitUser = (e) => {
@@ -35,7 +33,7 @@ class UserInfo extends Component {
             type="text"
             name="name"
             className="textInput"
-            value={this.state.name}
+            id="name"
             onChange={(e) => this.handleChange(e, "name")}
           ></input>
           <input
@@ -43,7 +41,7 @@ class UserInfo extends Component {
             type="text"
             name="lastName"
             className="textInput"
-            value={this.state.lastName}
+            id="lastName"
             onChange={(e) => this.handleChange(e, "lastName")}
           ></input>
           <input
@@ -51,7 +49,7 @@ class UserInfo extends Component {
             type="email"
             name="email"
             className="textInput"
-            value={this.state.email}
+            id="email"
             onChange={(e) => this.handleChange(e, "email")}
           ></input>
           <button type="submit">Click</button>
