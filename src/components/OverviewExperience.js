@@ -27,6 +27,10 @@ const Overview = (props) => {
             </div>
             <h3>schoolName</h3>
             <p>{userExp.schoolName}</p>
+            <h3>Title of Study</h3>
+            <p>{userExp.titleOfStudy}</p>
+            <h3>Date of Study</h3>
+            <p>{userExp.dateOfStudy}</p>
           </div>
         );
       })}
