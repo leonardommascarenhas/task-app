@@ -3,17 +3,13 @@ import Overview from "./Overview";
 import uniqid from "uniqid";
 import "../App.css";
 class UserInfo extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      name: "",
-      lastName: "",
-      id: uniqid(),
-      userExperience: { schoolName: "" },
-      userInfo: [],
-    };
-  }
+  state = {
+    name: "",
+    lastName: "",
+    id: uniqid(),
+    userExperience: { schoolName: "" },
+    userInfo: [],
+  };
 
   handleChange = (e) => {
     this.setState({ [e.target.name]: e.target.value });

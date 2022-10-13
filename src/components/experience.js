@@ -2,14 +2,11 @@ import React, { Component } from "react";
 import uniqid from "uniqid";
 import Overview from "./OverviewExperience";
 export default class Experience extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      id: uniqid(),
-      schoolName: "",
-      userExp: [],
-    };
-  }
+  state = {
+    id: uniqid(),
+    schoolName: "",
+    userExp: [],
+  };
 
   handleChange = (e) => {
     this.setState({ [e.target.name]: e.target.value });
@@ -19,7 +16,7 @@ export default class Experience extends Component {
   onSubmitUser = (e) => {
     e.preventDefault();
     this.setState({
-      userExperience: [this.state],
+      userExp: [this.state],
       schoolName: "",
       id: uniqid(),
     });
@@ -39,6 +36,7 @@ export default class Experience extends Component {
             value={this.state.schoolName}
             onChange={(e) => this.handleChange(e, "schoolName")}
           ></input>
+          <button type="submit">Alo</button>
         </form>
         <Overview userExp={userExp} />
       </section>
