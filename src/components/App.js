@@ -8,12 +8,16 @@ import PracticalExperience from "./PracticalExperience";
 class App extends Component {
   render() {
     return (
-      <div>
+      <>
         <Header />
-        <UserInfo />
-        <Experience />
-        <PracticalExperience />
-      </div>
+        <div className="contentContainer">
+          <div className="content">
+            <UserInfo />
+            <Experience />
+            <PracticalExperience />
+          </div>
+        </div>
+      </>
     );
   }
 }
