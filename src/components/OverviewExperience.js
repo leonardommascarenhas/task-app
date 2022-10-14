@@ -16,12 +16,7 @@ const Overview = (props) => {
           <div key={userExp.id} className="cardDisplay2">
             <div className="edit">
               <h2>Educational Experience</h2>
-              <button
-                id="editExp"
-                onClick={() => {
-                  hideCard();
-                }}
-              >
+              <button id="editExp" onClick={hideCard}>
                 Editar
               </button>
             </div>

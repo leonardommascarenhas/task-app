@@ -1,7 +1,7 @@
 import React from "react";
 
 function hideForm() {
-  let card = document.querySelector(".cardDisplay");
+  let card = document.querySelector(".curriculo");
   let userInfoSection = document.getElementById("userInfo");
   card.style.display = "none";
   userInfoSection.style.display = "flex";
@@ -14,7 +14,7 @@ const Overview = (props) => {
     <>
       {user.map((user) => {
         return (
-          <div key={user.id} className="cardDisplay">
+          <div key={user.id} className="cardDisplay curriculo">
             <div className="edit">
               <h2>User Info</h2>
               <button id="edit" onClick={hideForm}>
