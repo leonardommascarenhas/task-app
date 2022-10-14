@@ -3,6 +3,8 @@ import "../App.css";
 import Header from "./Header";
 import UserInfo from "./UserInfo";
 import Experience from "./experience";
+import PracticalExperience from "./PracticalExperience";
+
 class App extends Component {
   render() {
     return (
@@ -10,6 +12,7 @@ class App extends Component {
         <Header />
         <UserInfo />
         <Experience />
+        <PracticalExperience />
       </div>
     );
   }
