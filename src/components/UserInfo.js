@@ -33,6 +33,7 @@ class UserInfo extends Component {
       <>
         <section id="userInfo">
           <form className="form" onSubmit={this.onSubmitUser}>
+            <label htmlFor="name">Name</label>
             <input
               placeholder="Name"
               type="text"
@@ -41,6 +42,7 @@ class UserInfo extends Component {
               id="name"
               onChange={(e) => this.handleChange(e, "name")}
             ></input>
+            <label htmlFor="lastName">Last Name</label>
             <input
               placeholder="Last Name"
               type="text"
@@ -49,6 +51,7 @@ class UserInfo extends Component {
               id="lastName"
               onChange={(e) => this.handleChange(e, "lastName")}
             ></input>
+            <label htmlFor="email">Email</label>
             <input
               placeholder="Email"
               type="email"

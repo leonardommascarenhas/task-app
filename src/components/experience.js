@@ -33,6 +33,7 @@ export default class Experience extends Component {
       <>
         <section className="userExperience">
           <form className="form" onSubmit={this.onSubmitUser}>
+            <label htmlFor="schoolName">School Name</label>
             <input
               placeholder="School Name"
               type="text"
@@ -41,6 +42,7 @@ export default class Experience extends Component {
               value={this.state.userExp.schoolName}
               onChange={(e) => this.handleChange(e, "schoolName")}
             ></input>
+            <label htmlFor="titleOfStudy">Title Of Study</label>
             <input
               placeholder="Title Of Study"
               type="text"
@@ -49,6 +51,7 @@ export default class Experience extends Component {
               value={this.state.userExp.titleOfStudy}
               onChange={(e) => this.handleChange(e, "titleOfStudy")}
             ></input>
+            <label htmlFor="dateOfStudy">Date Of Study</label>
             <input
               placeholder="Date Of Study"
               type="text"
