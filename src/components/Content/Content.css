@@ -1,0 +1,10 @@
+.contentContainer{
+    max-width: 21cm;
+    max-height: 29.7cm;
+    margin: 20px auto;
+    padding: 30px;
+    border-width: 5px;
+    border-style: outset;
+    background-color: #fff;
+    
+    }
